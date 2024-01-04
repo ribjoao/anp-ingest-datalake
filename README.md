@@ -41,17 +41,15 @@ Docker runs a lighter version.
 ## Running with Docker
 
 1. Clone the repository.
-    a. Check environment variables GCP_PROJECT_ID and GCP_PROJECT_ID, GOOGLE_APPLICATION_CREDENTIALS, GOOGLE_CLOUD_PROJECT.
-    
+   
     ```bash
     git clone <https://github.com/ribjoao/anp-ingest-datalake.git>
     
     ```
     
-
-2. Check your **`DockerFile`**
+3. Check your **`DockerFile`**
     a. Use **`DockerFile`** to build image with Apache Airflow and GCP SDK configuration.
-3. Check your `docker-compose.yaml` 
+4. Check your `docker-compose.yaml` 
     a. You can use de env_file to set .env file with environment variables (GCP_PROJECT_ID, GCP_PROJECT_ID and others)
     b. Check the code of services ‘x-airflow-common’ and ‘volume’ 
     
@@ -72,8 +70,10 @@ Docker runs a lighter version.
         - ${AIRFLOW_PROJ_DIR:-.}/plugins:/opt/airflow/plugins
         - ~/.google/credentials/:/.google/credentials:ro
     ```
-    
-4. build using DockerFile and docker-compose.
+
+    c . Check environment variables GCP_PROJECT_ID and GCP_GCS_BUCKET, GOOGLE_APPLICATION_CREDENTIALS, GOOGLE_CLOUD_PROJECT.
+
+6. build using DockerFile and docker-compose.
 
 ```bash
 docker compose build
