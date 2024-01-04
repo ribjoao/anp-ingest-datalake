@@ -1,0 +1,18 @@
+# Environments
+*.env
+**.venv
+*-env/
+
+**google_credentials.json
+**logs/
+**/keys
+
+
+**__pycache__/
+.history
+### Python ###
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
